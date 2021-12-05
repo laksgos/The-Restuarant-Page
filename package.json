@@ -1,0 +1,23 @@
+{
+  "name": "the-restuarant-page",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laksgos/The-Restuarant-Page.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/laksgos/The-Restuarant-Page/issues"
+  },
+  "homepage": "https://github.com/laksgos/The-Restuarant-Page#readme",
+  "devDependencies": {
+    "webpack": "^5.64.4",
+    "webpack-cli": "^4.9.1"
+  }
+}
