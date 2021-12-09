@@ -1,0 +1,50 @@
+To-Do: 
+1. create Home Page 
+
+-Main Page Title 
+    -Images
+-Subtitle Info section 
+-Hours section 
+-Location section 
+     - embedd the map
+
+2. create Menu Page
+
+-Main Page Title "Menu"
+    - Subtitle: brief intro to the page 
+-Menu name (Beverage, Bakery, salads & sandwich) 
+    - Subtitle info section 
+    - Footer for each section 
+-Menu item (Name, Price, Description - optional) 
+
+3. Contact Page 
+
+- Main Page Title "Contact Us" 
+- Section Heading for Map 
+- Embedded map (change icon to coffee mug)
+- Contact form with submit button (YUP - data validation)
+    
+
+Doing: 
+
+
+Done: 
+
+
+
+
+Home
+-description 
+-hours 
+-location 
+
+
+Menu 
+- images for all items
+-drinks
+-slides
+-main 
+
+Contact 
+- images for all contacts
+- three main people involved 
