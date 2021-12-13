@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item-submission {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.chai1 {
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    position: relative;
+}
+
+.menuItem {
+    display: flex;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+.info {
+    float: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.breakimg {
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2%;
+    width: 2%;
+}
+
+.header {
+    float: center;
+    font-size: 2em;
+    margin-top: 20px;
+    text-align: center;
+    margin-top: 10x;
+    margin-bottom: 15px;
+}
+
+.embeddedmap {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.subtext {
+    float: center;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.locationFrame {
+    float: center;
+    text-align: center;
+}
+
+.chai2 {
+    float: left;
+    /* display:flex;
+    align-items:center;
+    justify-content:right;
+    position: relative;  */
+}
+
+.title {
+    font-size: 3em;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+
+/* NAVBAR STYLING STARTS */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: black;
+    color: #fff;
+}
+
+.nav-links a {
+    color: #fff;
+}
+
+
+/* LOGO */
+
+.logo {
+    font-size: 32px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+/* NAVBAR MENU */
+
+.navMenu {
+    display: flex;
+    gap: 1em;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navMenu li:hover {
+    background-color: gray;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.navMenu li {
+    padding: 5px 14px;
+}
+
+
+/* DROPDOWN MENU */
+
+.services {
+    position: relative;
+}
+
+.dropdown {
+    background-color: rgb(1, 139, 139);
+    padding: 1em 0;
+    position: absolute;
+    /*WITH RESPECT TO PARENT*/
+    display: none;
+    border-radius: 8px;
+    top: 35px;
+}
+
+.dropdown li+li {
+    margin-top: 10px;
+}
+
+.dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+}
+
+.dropdown li:hover {
+    background-color: #4c9e9e;
+}
+
+.services:hover .dropdown {
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5em;
+    /* text-align: center; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.menu {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+}
+
+.menu-group-heading {
+    margin: 0;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #ccc;
+}
+
+.menu-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    padding: 1.5em 0;
+}
+
+.menu-item {
+    display: flex;
+}
+
+.menu-item-image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 1.5em;
+}
+
+.menu-item-text {
+    flex-grow: 1;
+}
+
+.menu-item-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.menu-item-name {
+    margin-right: 1.5em;
+}
+
+.menu-item-description {
+    line-height: 1.6;
+}
+
+@media screen and (min-width: 992px) {
+    .menu {
+        font-size: 16px;
+    }
+    .menu-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu-item-image {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+
+/* 
+Contact Page  */
+
+.contactMessage {
+    height: 100px;
+}

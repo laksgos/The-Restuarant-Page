@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restuarant</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div id="content">
+
+
+
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo">Chai Cafe </div>
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+                <!-- NAVIGATION MENUS -->
+                <div class="navMenu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Menu</a></li>
+                    <li class="services">
+                        <a href="/">Contact</a>
+
+                    </li>
+
+                </div>
+            </ul>
+        </nav>
+
+
+        <img src="../src/chai.png" class="image chai1"><img src="../src/chai.png" class="image chai1"><img src="../src/chai.png" class="image chai2"><img src="../src/chai.png" class="image chai2">
+        <div class="pageContent">
+            <div class="title">Welcome to Chai Cafe</div>
+            <div class="info">We are proudly serving fresh home brew drinks from local sources. Our beans and tea leafs come directly from our community providers</div>
+            <img src="../src/break.PNG" class="breakimg">
+            <div class="hoursFrame">
+                <div class="header">Hours</div>
+                <div class="subtext">Sunday - Closed</div>
+                <div class="subtext">Monday 9am - 5 pm</div>
+                <div class="subtext">Tuesday 9am - 5 pm</div>
+                <div class="subtext">Wednesday 9am - 5 pm</div>
+                <div class="subtext">Thursday 9am - 5 pm</div>
+                <div class="subtext">Friday 9am - 5 pm</div>
+                <div class="subtext">Saturday 9am - 5 pm</div>
+            </div>
+            <img src="../src/break.PNG" class="breakimg">
+            <div class="locationFrame">
+                <div class="header">Location</div>
+                <div class="subtext">500 Lafayette Avenue, Brooklyn 11209
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12102.744294968943!2d-73.94773805!3d40.6808854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1638939465087!5m2!1sen!2sus" width="400" height="300" class="embeddedmap" style="border:0;"
+                    allowfullscreen="" loading="lazy"></iframe>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, options);
+    });
+</script>
+
+</html>

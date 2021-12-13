@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restuarant</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div id="content">
+
+
+
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo">Chai Cafe </div>
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">
+                <!-- NAVIGATION MENUS -->
+                <div class="navMenu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Menu</a></li>
+                    <li class="services">
+                        <a href="/">Contact</a>
+                    </li>
+                </div>
+            </ul>
+        </nav>
+
+
+        <img src="../src/chai.png" class="image chai1"><img src="../src/chai.png" class="image chai1"><img src="../src/chai.png" class="image chai2"><img src="../src/chai.png" class="image chai2">
+        <div class="pageContent">
+            <div class="title">Contact Us</div>
+            <div class="info">Concerns, Feedback, Experiences</div>
+            <div class="info">Send us a Message and we will be sure to get back to you.</div>
+            <img src="../src/break.PNG" class="breakimg">
+        </div>
+        <div class="container">
+            <section>
+                <form>
+                    <div class="mb-3">
+                        <label for="Name" class="form-label">Your Name</label>
+                        <input type="text" placeholder="First and Last Name" class="form-control" id="book-name">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="email-address" class="form-label">Email</label>
+                        <input type="text" placeholder="Email Address" class="form-control" id="author-name">
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="contact-message" class="form-label">Message</label>
+                        <textarea type="text" class="form-control contactMessage" id="published-year" placeholder="Write something.." style="height:200px"></textarea>
+
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success col-6">Submit</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+    </div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.sidenav');
+        var instances = M.Sidenav.init(elems, options);
+    });
+</script>
+
+</html>
