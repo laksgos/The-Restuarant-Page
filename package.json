@@ -4,7 +4,8 @@
     "description": "",
     "main": "app.js",
     "scripts": {
-        "start": "webpack --config webpack.config.js"
+        "start": "webpack --config webpack.config.js",
+        "lint": "eslint --fix ./src/*js"
     },
     "repository": {
         "type": "git",
@@ -17,10 +18,18 @@
     },
     "homepage": "https://github.com/laksgos/The-Restuarant-Page#readme",
     "devDependencies": {
+        "eslint": "^8.4.1",
+        "eslint-config-google": "^0.14.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-react": "^7.27.1",
         "webpack": "^5.64.4",
         "webpack-cli": "^4.9.1"
     },
     "dependencies": {
+        "dotenv": "^10.0.0",
+        "stripe": "^8.193.0",
         "yup": "^0.32.11"
     }
 }

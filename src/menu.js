@@ -1,13 +1,12 @@
-import { ordered, clearPage, menuItemSelector, elementcreator2, createNav, buying } from './config'
+import { ordered, clearPage, menuItemSelector, elementcreator2, createNav } from './config'
 import { menuHeaderinfo, BeverageItems, Pastryitems } from './objects'
 
 function menuHeader(menuHeaderinfo) {
 
-    let title = menuHeaderinfo.title
-    let info1 = menuHeaderinfo.info1
+    const title = menuHeaderinfo.title
 
-    let div1 = document.querySelector("#content")
-    let div2 = elementcreator2(div1, "div", "", "pageContent")
+    const div1 = document.querySelector("#content")
+    const div2 = elementcreator2(div1, "div", "", "pageContent")
 
 
     elementcreator2(div2, title.el, title.text, title.class)
@@ -25,20 +24,20 @@ function menuHeader(menuHeaderinfo) {
 }
 
 function menu(menuItems) {
-    let div1 = document.querySelector("#content")
-    let divContainer = elementcreator2(div1, "div", "", "container")
-    let divMenu = elementcreator2(divContainer, "div", "", "menu")
+    const div1 = document.querySelector("#content")
+    const divContainer = elementcreator2(div1, "div", "", "container")
+    const divMenu = elementcreator2(divContainer, "div", "", "menu")
     elementcreator2(divMenu, "h2", "Beverages", "menu-group-heading")
     let divMenuGroup = elementcreator2(divMenu, "div", "", "menu-group")
 
     Object.keys(BeverageItems).forEach(key => {
 
-        let divMenuItem = elementcreator2(divMenuGroup, "div", "", "menu-item", BeverageItems[key].id)
+        const divMenuItem = elementcreator2(divMenuGroup, "div", "", "menu-item", BeverageItems[key].id)
         const image = elementcreator2(divMenuItem, "img", "", "menu-item-image", "", BeverageItems[key].imgSource)
         image.alt = `${BeverageItems[key].title}`
 
-        let divMenuItemText = elementcreator2(divMenuItem, "div", "", "menu-item-text")
-        let divMenuItemHeading = elementcreator2(divMenuItemText, "h3", "", "menu-item-heading")
+        const divMenuItemText = elementcreator2(divMenuItem, "div", "", "menu-item-text")
+        const divMenuItemHeading = elementcreator2(divMenuItemText, "h3", "", "menu-item-heading")
         elementcreator2(divMenuItemHeading, "span", BeverageItems[key].title, "menu-item-name")
         elementcreator2(divMenuItemHeading, "span", BeverageItems[key].price, "menu-item-price")
 
@@ -48,7 +47,7 @@ function menu(menuItems) {
 
             menuItemSelector(BeverageItems[key])
 
-            let divselector = document.getElementById(`${BeverageItems[key].id}`)
+            const divselector = document.getElementById(`${BeverageItems[key].id}`)
 
 
 
@@ -68,13 +67,13 @@ function menu(menuItems) {
     divMenuGroup = elementcreator2(divMenu, "div", "", "menu-group")
 
     Object.keys(Pastryitems).forEach(key => {
-        let divMenuItem = elementcreator2(divMenuGroup, "div", "", "menu-item", Pastryitems[key].id)
+        const divMenuItem = elementcreator2(divMenuGroup, "div", "", "menu-item", Pastryitems[key].id)
 
-        let image = elementcreator2(divMenuItem, "img", "", "menu-item-image", "", Pastryitems[key].imgSource)
+        const image = elementcreator2(divMenuItem, "img", "", "menu-item-image", "", Pastryitems[key].imgSource)
         image.alt = `${Pastryitems[key].title}`
 
-        let divMenuItemText = elementcreator2(divMenuItem, "div", "", "menu-item-text")
-        let divMenuItemHeading = elementcreator2(divMenuItemText, "h3", "", "menu-item-heading")
+        const divMenuItemText = elementcreator2(divMenuItem, "div", "", "menu-item-text")
+        const divMenuItemHeading = elementcreator2(divMenuItemText, "h3", "", "menu-item-heading")
         elementcreator2(divMenuItemHeading, "span", Pastryitems[key].title, "menu-item-name")
         elementcreator2(divMenuItemHeading, "span", Pastryitems[key].price, "menu-item-price")
 
@@ -85,7 +84,7 @@ function menu(menuItems) {
             menuItemSelector(Pastryitems[key])
 
 
-            let divselector = document.getElementById(`${Pastryitems[key].id}`)
+            const divselector = document.getElementById(`${Pastryitems[key].id}`)
 
             // if (divselector.classList.contains("highlight")) {
             //     divselector.classList.toggle("highlight")
@@ -96,13 +95,13 @@ function menu(menuItems) {
         })
 
     });
-    let buttonDiv = elementcreator2(div1, "div", "", "buttonDiv")
-    let submissionButton = elementcreator2(buttonDiv, "button", "Order", ["menu-item-submission", "col-6", "btn-success", "btn"], "", "", "submit")
+    const buttonDiv = elementcreator2(div1, "div", "", "buttonDiv")
+    const submissionButton = elementcreator2(buttonDiv, "button", "Order", ["menu-item-submission", "col-6", "btn-success", "btn"], "", "", "submit")
 
     submissionButton.addEventListener("click", () => {
         let totalprice = 0;
-        let orderedItems = ordered()
-        let orderedItemsDetails = []
+        const orderedItems = ordered()
+        const orderedItemsDetails = []
         console.log(orderedItems)
 
         Object.keys(BeverageItems).forEach(key => {
@@ -143,7 +142,7 @@ function menu(menuItems) {
 
 }
 
-//MENU PAGE CREATOR 
+// MENU PAGE CREATOR 
 function menuPage() {
     clearPage()
     createNav()

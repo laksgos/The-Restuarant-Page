@@ -3,7 +3,7 @@ import { welcome, hours, mapLocation, images, map } from './objects'
 
 
 function introMessage(welcome, images) {
-    let div1 = document.querySelector("#content")
+    const div1 = document.querySelector("#content")
 
     elementcreator2(div1, "img", "", "chai1", "", images.intropic)
     elementcreator2(div1, "img", "", "chai1", "", images.intropic)
@@ -14,7 +14,7 @@ function introMessage(welcome, images) {
     // imagecreator(div1, images.intropic, "image", "chai2")
     // imagecreator(div1, images.intropic, "image", "chai2")
 
-    let div2 = elementcreator2(div1, "div", "", "pageContent", "pageContent")
+    const div2 = elementcreator2(div1, "div", "", "pageContent", "pageContent")
     elementcreator2(div2, "div", welcome.title, "title")
     elementcreator2(div2, "div", welcome.info, "info")
 
@@ -25,9 +25,9 @@ function introMessage(welcome, images) {
 
 function schedule(hours) {
 
-    let div2 = document.querySelector("#pageContent")
+    const div2 = document.querySelector("#pageContent")
 
-    let div3 = elementcreator2(div2, "div", "", "hoursFrame")
+    const div3 = elementcreator2(div2, "div", "", "hoursFrame")
     elementcreator2(div3, "div", "Hours", "header")
 
     Object.keys(hours).forEach(day => {
@@ -38,12 +38,12 @@ function schedule(hours) {
 
 function location(mapLocation) {
 
-    let div2 = document.querySelector(".pageContent")
+    const div2 = document.querySelector(".pageContent")
     elementcreator2(div2, "img", "", "breakimg", "", images.breakimg)
-    let div3 = elementcreator2(div2, "div", "", "locationFrame")
+    const div3 = elementcreator2(div2, "div", "", "locationFrame")
     elementcreator2(div3, "div", mapLocation.header, "header")
     elementcreator2(div3, "div", mapLocation.location, "subtext")
-    let map1 = elementcreator2(div3, "iframe", "", "embeddedmap")
+    const map1 = elementcreator2(div3, "iframe", "", "embeddedmap")
     map1.width = "400"
     map1.height = "400"
     map1.style = "border:1px"
@@ -54,7 +54,7 @@ function location(mapLocation) {
 
 }
 
-//HOME PAGE CREATOR 
+// HOME PAGE CREATOR 
 function homePage() {
     clearPage()
     createNav()

@@ -1,9 +1,3 @@
-//  import React from "react"
-//  import * as yup from "yup;"
-//  import { userSchema } from "./Validations/UserValidation"
-
-
-//info objects 
 const welcome = {
     title: "Welcome to Chai Cafe",
     info: "We are proudly serving fresh home brew drinks from local sources. Our beans and tea leafs come directly from our community providers",
@@ -39,124 +33,9 @@ const map = {
 }
 
 
-// function homePage(welcome, hours, mapLocation) {
-//     // console.log(welcome)
-//     // originaldiv=document.querySelector("#content")
-//     // titlemessage = welcome.title
-//     // titleframe= document.createElement("div")
-//     // titleframe.innerText=titlemessage
-//     // originaldiv.appendChild(titleframe)
-//     // console.log(titleframe)
-//     // titleframe.classList.add("home", "title")
-//     addImage("#content", "../image/chai.png", "image", "chai1")
-//     addImage("#content", "../image/chai.png", "image", "chai1")
-//     addImage("#content", "../image/chai.png", "image", "chai2")
-//     addImage("#content", "../image/chai.png", "image", "chai2")
-//     newElement("#content", "div", welcome.title, "title")
-//     newElement("#content", "div", welcome.info, "info")
-//     newElement("#content", "div", "Hours", "header", "hours")
-//     Object.keys(hours).forEach(day => {
-//         newElement(".hours", "div", hours[day], "daily")
-
-//     });
-
-//     newElement("#content", "div", Object.keys(mapLocation)[0], "header", "location")
-//     newElement(".location", "div", mapLocation.Location, "locationtext")
-
-// }
-
-// function newElement(attach, element, text, classtext, classtext2 = "") {
-//     let attachingTo = document.querySelector(`${attach}`);
-//     let newElem = document.createElement(`${element}`);
-//     newElem.innerHTML = text;
-//     newElem.classList.add(`${classtext}`)
-//     newElem.classList.add(`${classtext2}`)
-//     attachingTo.appendChild(newElem)
-//     console.log(newElem)
-// }
-
-// function addImage(attach, link, classtext, classtext2) {
-//     let attachingTo = document.querySelector(`${attach}`);
-//     let newElem = document.createElement("img");
-//     newElem.src = `${link}`
-//     newElem.classList.add(`${classtext}`)
-//     newElem.classList.add(`${classtext2}`)
-//     attachingTo.appendChild(newElem)
-
-// }
-// //navigation Home, menu, contact  
-// function createNav() {
-//     originaldiv = document.querySelector("#content")
-//     console.log(originaldiv)
-
-//     navbar = document.createElement("nav")
-//     navbar.classList.add("navbar")
-//     console.log(navbar)
-
-//     originaldiv.appendChild(navbar);
-
-//     navdiv = document.createElement("div")
-//     navdiv.classList.add("logo_header")
-//     navA = document.createElement("a")
-//     navA.classList.add("logo");
-//     navA.href = "#"
-//     navLogoButton = document.createElement("button")
-//     navLogoButton.classList.add("navbar_toggle")
-//     navLogoButton.textContent = "hi"
-
-//     navbarButtonI = document.createElement("i")
-//     navbarButtonI.classList.add("fas", "fa-bars")
-
-//     navbar.appendChild(navdiv)
-//     navdiv.appendChild(navA)
-//     navdiv.appendChild(navLogoButton)
-//     navLogoButton.appendChild(navbarButtonI);
-
-//     //navbar rest 
-//     ul = document.createElement("ul")
-//     ul.classList.add("main_nav")
-//     limenu = document.createElement("li")
-//     limenua = document.createElement("a")
-//     licontact = document.createElement("li")
-//     licontacta = document.createElement("a")
-//     licontacta.href = "#"
-//     limenua.href = "#"
-//     liHome = document.createElement("li")
-//     liHomea = document.createElement("a")
-//     liHomea.href = "#"
-
-//     liHomea.innerText = "Home"
-//     licontacta.innerText = "Contact"
-//     limenua.innerText = "Menu"
-
-//     ul.appendChild(liHome)
-//     liHome.appendChild(liHomea)
-
-//     ul.appendChild(limenu)
-//     limenu.appendChild(limenua)
-//     ul.appendChild(licontact)
-//     licontact.appendChild(licontacta)
-//     navbar.appendChild(ul)
-
-// }
-
-// createNav();
-// homePage(welcome, hours, mapLocation);
-
-
-//ELEMENT CREATORS 
-function imagecreator(attacher, source, cls1 = "", cls2 = "") {
-    let image = document.createElement("img")
-    image.src = `${source}`
-    if (cls1) { image.classList.add(`${cls1}`) }
-    if (cls2) { image.classList.add(`${cls2}`) }
-    if (attacher) { attacher.appendChild(image) }
-
-
-}
 
 function elementcreator(attacher, elem, insidetext = "", class1 = "", class2 = "", source = "") {
-    let elementcreated = document.createElement(`${elem}`)
+    const elementcreated = document.createElement(`${elem}`)
     if (class1) { elementcreated.classList.add(`${class1}`) }
     if (class2) { elementcreated.classList.add(`${class2}`) }
     if (insidetext) { elementcreated.innerText = insidetext }
@@ -168,13 +47,11 @@ function elementcreator(attacher, elem, insidetext = "", class1 = "", class2 = "
     }
 
     return elementcreated;
-
 }
-
 
 function elementcreator2(attacher, elem, insidetext = "", classes, id = "", source = "", type = "", placeholder = "") {
 
-    let elementcreated = document.createElement(`${elem}`)
+    const elementcreated = document.createElement(`${elem}`)
     if (Array.isArray(classes)) {
         for (x = 0; x < classes.length; x++) {
             elementcreated.classList.add(`${classes[x]}`)
@@ -195,12 +72,7 @@ function elementcreator2(attacher, elem, insidetext = "", classes, id = "", sour
 
     return elementcreated;
 
-
 }
-
-
-
-
 // NAV CREATOR 
 function createNav() {
 
@@ -237,7 +109,7 @@ function createNav() {
 
 }
 
-//HOME PAGE FUNCTION
+// HOME PAGE FUNCTION
 
 function introMessage(welcome, images) {
     div1 = document.querySelector("#content")
@@ -268,7 +140,6 @@ function schedule(hours) {
     Object.keys(hours).forEach(day => {
         elementcreator2(div3, "div", hours[day], "subtext")
     });
-
 }
 
 function location(mapLocation) {
@@ -285,23 +156,10 @@ function location(mapLocation) {
     map1.allowfullscreen = ""
     map1.loading = "lazy"
     map1.src = map.googleMap;
-
-
 }
-
-
-//HOME PAGE CREATOR 
-// createNav()
-// introMessage(welcome, images)
-// schedule(hours)
-// location(mapLocation)
-
-
-//MENU OBJECTS 
 
 const menuHeaderinfo = {
     title: { el: "div", text: "Menu", class: "title" },
-    info1: { el: "div", text: "Fresh Brewed, Locally Sourced", class: "info" },
     info2: { el: "div", text: "Select below items and click Submit to proceed to checkout.", class: "info" },
     breakimg: { el: "img", class: "breakimg", source: "../image/break.png" }
 }
@@ -408,19 +266,17 @@ const Pastryitems = {
 
 
 
-//MENU FUNCTIONS
+// MENU FUNCTIONS
 
 function menuHeader(menuHeaderinfo) {
 
-    let title = menuHeaderinfo.title
-    let info1 = menuHeaderinfo.info1
+    const title = menuHeaderinfo.title
 
     div1 = document.querySelector("#content")
     div2 = elementcreator2(div1, "div", "", "pageContent")
 
 
     elementcreator2(div2, title.el, title.text, title.class)
-    elementcreator2(div2, menuHeaderinfo.info1.el, menuHeaderinfo.info1.text, menuHeaderinfo.info1.class)
     elementcreator2(div2, menuHeaderinfo.info2.el, menuHeaderinfo.info2.text, menuHeaderinfo.info2.class)
 
     elementcreator2(div2, menuHeaderinfo.breakimg.el, "", menuHeaderinfo.breakimg.class, "", menuHeaderinfo.breakimg.source)
@@ -508,8 +364,8 @@ function menu(menuItems) {
 
     submissionButton.addEventListener("click", () => {
         let totalprice = 0;
-        let orderedItems = ordered()
-        let orderedItemsDetails = []
+        const orderedItems = ordered()
+        const orderedItemsDetails = []
         console.log(orderedItems)
 
         Object.keys(Pastryitems).forEach(key => {
@@ -538,7 +394,7 @@ function menu(menuItems) {
     // elementcreator(divMenuItemText, "p", BeverageItems.Cappucino.description, "menu-item-description")
 
 }
-let buying = []
+const buying = []
 
 
 function menuItemSelector(obj) {
@@ -643,7 +499,7 @@ function contactForm() {
     // btnRemove.value = "remove";
     // btnRemove.onclick = controllerRemoveBook;
 }
-//CONTACT PAGE CREATOR 
+// CONTACT PAGE CREATOR 
 function contactPage() {
 
     clearPage()
@@ -651,7 +507,7 @@ function contactPage() {
     introMessage(contact, images)
     contactForm()
 }
-//MENU PAGE CREATOR 
+// MENU PAGE CREATOR 
 function menuPage() {
     clearPage()
     createNav()
@@ -660,7 +516,7 @@ function menuPage() {
 
 }
 
-//HOME PAGE CREATOR 
+// HOME PAGE CREATOR 
 function homePage() {
     clearPage()
     createNav()
@@ -679,8 +535,8 @@ function loader() {
 loader()
 
 function ordered() {
-    let items = Array.from(document.getElementsByClassName("highlight"));
-    let orderedItems = []
+    const items = Array.from(document.getElementsByClassName("highlight"));
+    const orderedItems = []
     items.forEach(function(item, index) {
         orderedItems.push(Number(item.id))
     });

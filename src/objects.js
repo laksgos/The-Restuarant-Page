@@ -32,7 +32,7 @@ const map = {
     googleMap: "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d12102.744294968943!2d-73.94773805!3d40.6808854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1638939465087!5m2!1sen!2sus"
 }
 
-//menu object
+// menu object
 
 const menuHeaderinfo = {
     title: { el: "div", text: "Menu", class: "title" },
